@@ -24,20 +24,71 @@ namespace DropUnDropEvent
         {
             InitializeComponent();
 
-            Button button = new Button
+            Button mainButton = new Button
             {
                 Content = "DropEvent",
                 Width = 80,
                 Height = 30
             };
 
-            button.MouseLeave += button_MouseLeave;
-
-            MainGrid.Children.Add(button);
-
-            void button_MouseLeave(object sender, EventArgs e)
+            ListBox listBox = new ListBox
             {
-                button.Background = Brushes.Green;
+                Width = 80,
+                Height = 85,
+                Visibility = Visibility.Hidden,
+                Margin = new Thickness(90, 115, 90, 0),
+                HorizontalContentAlignment = HorizontalAlignment.Stretch,
+            };
+
+            /*listBox.Items.Add("One");
+            listBox.Items.Add("Two");
+            listBox.Items.Add("Three");
+            listBox.Items.Add("Four");*/
+
+            for (int i = 0;i < 3;i++)
+            {
+                Button buttonsInList = new Button
+                {
+                    Content = "Button",
+                    BorderBrush = new SolidColorBrush(Colors.Transparent),
+                    BorderThickness = new Thickness(0,0,0,0),//border при наведении на кнопку
+                    Background = Brushes.White,//цвет внутри кнопки 
+                };//единый стиль для кнопок, которые будут в listBox`е
+
+                listBox.Items.Add(buttonsInList);
+            }
+
+            mainButton.MouseEnter += button_Drop;
+            mainButton.MouseLeave += button_UnDrop;
+
+            listBox.MouseEnter += list_Drop;
+            listBox.MouseLeave += list_UnDrop;
+
+            MainGrid.Children.Add(mainButton);
+            MainGrid.Children.Add(listBox);
+
+            void button_Drop(object sender, MouseEventArgs e)
+            {
+                /*if (e.RightButton == MouseButtonState.Pressed)
+                {
+                    MessageBox.Show("Test");
+                }*/
+                listBox.Visibility = Visibility.Visible;
+            }
+
+            void button_UnDrop(object sender, EventArgs e)
+            {
+                listBox.Visibility = Visibility.Hidden;
+            }
+
+            void list_Drop(object sender, EventArgs e)
+            {
+                listBox.Visibility = Visibility.Visible;
+            }
+
+            void list_UnDrop(object sender, EventArgs e)
+            {
+                listBox.Visibility = Visibility.Hidden;
             }
         }
     }

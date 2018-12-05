@@ -1,7 +1,6 @@
 C:\Users\User\Documents\Visual Studio 2017\Projects\DropUnDropEvent\DropUnDropEvent\bin\Debug\DropUnDropEvent.exe.config
 C:\Users\User\Documents\Visual Studio 2017\Projects\DropUnDropEvent\DropUnDropEvent\bin\Debug\DropUnDropEvent.exe
 C:\Users\User\Documents\Visual Studio 2017\Projects\DropUnDropEvent\DropUnDropEvent\bin\Debug\DropUnDropEvent.pdb
-C:\Users\User\Documents\Visual Studio 2017\Projects\DropUnDropEvent\DropUnDropEvent\obj\Debug\DropUnDropEvent.csprojAssemblyReference.cache
 C:\Users\User\Documents\Visual Studio 2017\Projects\DropUnDropEvent\DropUnDropEvent\obj\Debug\MainWindow.g.cs
 C:\Users\User\Documents\Visual Studio 2017\Projects\DropUnDropEvent\DropUnDropEvent\obj\Debug\App.g.cs
 C:\Users\User\Documents\Visual Studio 2017\Projects\DropUnDropEvent\DropUnDropEvent\obj\Debug\DropUnDropEvent_MarkupCompile.cache
